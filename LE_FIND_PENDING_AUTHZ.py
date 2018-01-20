@@ -19,7 +19,7 @@ KEY_FOLDER = r""
 
 #DO NOT TOUCH PARAMETERS BELOW UNLESS YOU ARE CONFIDENT OF THEIR FUNCTIONING
 
-CHALLENGES_REGEX = r'(?<=letsencrypt\.org\/acme\/authz\/).+?(?=\>|\s|\.)'
+CHALLENGES_REGEX = r'(?<=letsencrypt\.org\/acme\/authz\/)[\w_-]+'
 SUCCESS_REGEX = r'Congratulations! Your certificate'
 LOG_CUTOFF_DAYS = dt.date.today() - dt.timedelta(days=30)
 PRODUCTION_CA = 'https://acme-v01.api.letsencrypt.org/'
